@@ -62,6 +62,9 @@ RUN apt-get update && apt-get upgrade -y \
 
 WORKDIR /code
 
+#Fixes apt-utils problem
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
+
 RUN groupadd -r web && useradd -d /code -r -g web web \
   && chown web:web -R /code \
   && mkdir -p /var/www/django/static /var/www/django/media \
