@@ -1,8 +1,8 @@
 ---
 
 variables:
-  GROUP_NAME: "wemake.services"
-  PROJECT_NAME: "debate"
+  GROUP_NAME: "debate"
+  PROJECT_NAME: "debatedb"
   REGISTRY: "registry.gitlab.com"
   IMAGE_FULL_NAME: "${REGISTRY}/${GROUP_NAME}/${PROJECT_NAME}"
 
