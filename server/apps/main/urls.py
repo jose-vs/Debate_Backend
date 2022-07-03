@@ -1,9 +1,8 @@
 from django.urls import path
-
-from server.apps.main.views import index
-
-app_name = 'main'
+from . import views
 
 urlpatterns = [
-    path('hello/', index, name='hello'),
+    path('', views.getRoutes, name='routes'),
+    path('posts/', views.getPosts, name="notes"),
+
 ]
